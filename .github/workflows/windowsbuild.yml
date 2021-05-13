@@ -45,6 +45,11 @@ jobs:
     - name: Deploying pgModeler
       run: mingw32-make install
 
+    - name: Run qtdeploy
+      run: |
+        cd D:/a/pgmodeler/pgmodeler/build;
+        windeployqt pgmodeler.exe pgmodeler_ui.dll
+
     - name: Archive build
       uses: actions/upload-artifact@v2
       with:
