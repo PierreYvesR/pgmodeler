@@ -44,3 +44,10 @@ jobs:
      
     - name: Deploying pgModeler
       run: mingw32-make install
+
+    - name: Archive build
+      uses: actions/upload-artifact@v2
+      with:
+        name: build
+        path: |
+          D:/a/pgmodeler/pgmodeler/build
